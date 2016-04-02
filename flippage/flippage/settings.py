@@ -22,6 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ')f)n(e-kq)50*jw8xrm+4vzx3rn_hklqc#tj41ze$fl$9xz)8t'
 
+# Email settings
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = 'xqpdcjfxeqwnumrq'
+EMAIL_HOST_USER = 'kdjohar91@gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 # Application definition
 
@@ -32,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -50,7 +63,9 @@ ROOT_URLCONF = 'flippage.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, "templates"),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -58,7 +73,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                "django.core.context_processors.request",
+                'django.template.context_processors.request',
             ],
+
         },
     },
 ]
@@ -108,10 +126,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
-
+LOGIN_REDIRECT_URL = '/'
 
 try:
     from local_settings import *
 except ImportError:
     pass
+
+from allauth_settings import *
