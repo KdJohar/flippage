@@ -35,5 +35,5 @@ SOCIALACCOUNT_PROVIDERS = \
             'updated_time'],
         'EXCHANGE_TOKEN': True,
         'LOCALE_FUNC': lambda request: 'en_US',
-        'VERIFIED_EMAIL': False,
+        'VERIFIED_EMAIL': True,
         'VERSION': 'v2.5'}}
