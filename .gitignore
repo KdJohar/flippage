@@ -3,6 +3,4 @@ flippage/.idea/*
 
 flippage/flippage/local_settings.py
 
-flippage/flippage/local_settings.py
-
-flippage/flippage/local_settings.py
+*.pyc
