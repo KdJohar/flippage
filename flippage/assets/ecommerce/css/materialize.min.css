@@ -906,6 +906,7 @@
   background-color: #000000 !important;
 }
 
+
 .cyan-text {
   color: #D13135 !important;
 }
@@ -2583,7 +2584,7 @@ ul {
 }
 
 a {
-  color: #D13135;
+  color: #EC407A;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -7994,7 +7995,7 @@ nav .input-field label.active {
 .btn,.btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #D13135;
+  background-color: #EC407A;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: 0.2s ease-out;
@@ -8019,7 +8020,7 @@ nav .input-field label.active {
   height: 37px;
   line-height: 37px;
   padding: 0;
-  background-color: #D13135;
+  background-color: #EC407A;
   border-radius: 50%;
   transition: .3s;
   cursor: pointer;
@@ -10820,4 +10821,11 @@ button.picker__today:focus,button.picker__clear:focus,button.picker__close:focus
   .picker--time .picker__box {
     margin-bottom: 5em;
   }
+}
+.primary-color {
+  background-color: #283593 !important;
+}
+
+.secondary-color {
+  background-color: #EC407A !important;
 }
