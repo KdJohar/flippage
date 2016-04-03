@@ -135,7 +135,7 @@ MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/'
 
-admin.site.site_header = 'Folio Administration'
+admin.site.site_header = 'Flippage Admin'
 
 try:
     from local_settings import *
