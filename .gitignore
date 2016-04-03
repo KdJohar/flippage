@@ -6,3 +6,5 @@ flippage/flippage/local_settings.py
 *.pyc
 
 static/*
+
+media/*
